@@ -18,7 +18,7 @@ body {
 h1 { 
     font-size: 25px;
     line-height: 30px;
-    color: rgb(41, 100, 7);
+    color: rebeccapurple;
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -29,6 +29,10 @@ h2, h3 {
     color: rgb(82, 155, 41);
     font-family: Poppins, Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+h2 { 
+    color: red;
 }
 
 p { 
@@ -63,4 +67,8 @@ nav li {
 
 nav li:hover { 
     background-color: aliceblue;
+}
+
+.upside-down-pic { 
+    transform: rotate(180deg);
 }
