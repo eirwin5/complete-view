@@ -4,27 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Recipes</title>
 </head>
 
 <body>
   <div>
-    <a href="#main-content">Skip to Main Content</a>
+    <a id="skip" href="#main-content">Skip to Main Content</a>
     <nav>
       <ul>
         <li>
-          <a href="index.html">Travel</a>
+          <div class="navli">
+            <img src="icons/travel-icon.svg" />
+            <a href="index.html">Travel</a>
+          </div>
         </li>
         <li>
-          <a href="recipes.html">Recipes</a>
+          <div class="navli-selected">
+            <img src="icons/recipe-icon.svg" />
+            <a href="recipes.html">Recipes</a>
+          </div>
         </li>
         <li>
-          <a href="pets.html">Pets</a>
+          <div class="navli">
+            <img src="icons/pets-icon.svg" />
+            <a href="pets.html">Pets</a>
+          </div>
         </li>
       </ul>
     </nav>
   </div>
   <main id="main-content">
+    <h1>Recipes</h1>
     <div>
       <h2>Double Chocolate Cookies</h2>
       <p><span>Origin:</span> Michigan</p>
