@@ -1,10 +1,15 @@
 :root { 
-    --seashell: #EEE2DF;
-    --sienna: #E27D60;
-    --buff: #E8A87C;
-    --charcoal: #394053;
-    --dovegrey: #4E4A59;
-    --tiffblue: #85DCBD; 
+    --purple1: #E7E0FF; 
+    --purple3: #4B2AB5;
+    --purple4: #27106B; 
+
+    --orange1: #FFE9C7;
+    --orange3: #904B00;
+
+    --blue1: #B9DAE4;
+    --blue3: #065F7A;
+
+
 }
 
 #skip { 
@@ -24,19 +29,19 @@
 }
 
 @font-face {
-    font-family: Inter;
-    src: url(../fonts/Inter-Regular.ttf);
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
     font-weight: normal;
 }
 
 @font-face {
-    font-family: Inter;
-    src: url(../fonts/Inter-Bold.ttf);
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
     font-weight: bold;
 }
 
 body { 
-    font-family: Inter, 'Open Sans', Arial;
+    font-family: Montserrat, 'Open sans', Arial;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
@@ -58,6 +63,39 @@ h1 {
     line-height: 55px;
 }
 
+.pets { 
+    color: var(--purple3);
+}
+
+.travel { 
+    color: var(--blue3); 
+}
+
+.recipe { 
+    color: var(--orange3); 
+}
+
+/* h1{
+    animation: 2s anim-lineUp ease-out infinite;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  } */
+
 h2 { 
     font-weight: bold;
     font-size: 30px;
@@ -71,6 +109,15 @@ h3 {
 }
 
 /* nav styling start */
+nav { 
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(240, 240, 240, 0.5); 
+    z-index: 10;
+}
+
 nav ul { 
     display: flex;
     flex-direction: row;
@@ -87,29 +134,37 @@ nav li div {
     font-size: 20px;
 }
 
-.navli-selected { 
-    border-bottom: solid 2px var(--tiffblue);
-    color: var(--tiffblue);
+.navli-pets { 
+    border-bottom: solid 3px var(--purple3);
+    color: var(--purple3);
+}
+.navli-travel { 
+    border-bottom: solid 3px var(--blue3);
+    color: var(--blue3);
+} 
+.navli-recipes { 
+    border-bottom: solid 3px var(--orange3);
+    color: var(--orange3);
 }
 /* nav styling end */
 
 .page-title { 
-    padding: 50px 5px;
-    margin: auto;
+    padding: 50px 0 0 0;
+    margin: 50px auto;
     text-align: center;
 }
 
-.location-section { 
+.section { 
     margin-bottom: 100px;
 }
 
-.location-section div { 
+.section div { 
     margin: 10px 0;
+    padding: 10px 0;
 }
 
-
 /* location title section start */
-.title-img { 
+.title-img, .recipe-title { 
     padding: 0 20px;
     display: flex;
     flex-direction: column-reverse;
@@ -118,20 +173,22 @@ nav li div {
     gap: 10px;
 }
 
-.title-img div { 
+.recipe-title { 
+    flex-direction: column;
     text-align: center;
 }
 
-.title-img img { 
+.title-img div, .recipe-title div { 
+    text-align: center;
+}
+
+.title-img img, .recipe-title img { 
     border-radius: 50%;
+    /* border: 5px solid var(--pink); */
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
-
-/* #portrait { 
-    width: 300px;
-} */
 /* title section end */
 
 /* description start  */
@@ -187,3 +244,93 @@ nav li div {
     grid-column: 1/-1;
 }
 /* photo gallery end */
+
+.profile-img { 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-img-background {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--purple1); /* Set the background color for the circle */
+    border-radius: 50%;
+    left: -19px; /* Offset to the left */
+    top: 20px; /* Offset down */
+    z-index: -1;
+    animation: circle 1s infinite linear;
+}
+
+.profile-img-container { 
+    position: relative;
+    display: inline-block;
+}
+
+.pet-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.purple-highlight, .orange-highlight, .blue-highlight {
+    width: max-content;
+    position: relative;
+    color: var(--purple3);
+} 
+
+.purple-highlight::before, .orange-highlight::before, .blue-highlight::before {
+  background-color: var(--purple1);
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  height: 70%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
+}
+
+.orange-highlight {
+    color: var(--orange3);
+}
+
+.orange-highlight::before {
+  background-color: var(--orange1);
+}
+
+.blue-highlight {
+    color: var(--blue3);
+}
+
+.blue-highlight::before {
+  background-color: var(--blue1);
+}
+
+.title-img .still { 
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gif { 
+        display: none;
+    }
+    .title-img .still { 
+        display: block;
+    }
+    @keyframes circle {
+        0% {
+          transform: scale(1);
+          background-color: var(--purple1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+          background-color: var(--purple4);
+        }
+      }
+}
