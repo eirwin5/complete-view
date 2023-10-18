@@ -195,10 +195,23 @@ nav li div {
 /* section end */
 
 /* section title img start */
+.image-wrap {
+  overflow: auto; 
+}
+
+.image-wrap img {
+  float: right; 
+  margin-left: 20px; 
+}
+
+.location-title { 
+  margin-bottom: 10px;
+}
+
 .title-img,
 .recipe-title {
-  padding: 0 20px;
-  margin: 20px 0;
+  /* padding: 0 20px; */
+  /* margin: 20px 0; */
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -234,11 +247,7 @@ nav li div {
 }
 
 .description {
-  padding: 20px 0;
-}
-
-.description p {
-  margin: 15px 0;
+  padding: 15px 0;
 }
 /* description end  */
 
@@ -264,7 +273,7 @@ nav li div {
 }
 
 .photo-gallery div {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(9, 56, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 5px;
