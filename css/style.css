@@ -3,11 +3,12 @@
   --purple3: #4b2ab5;
   --purple4: #27106b;
 
-  --orange1: #ffe9c7;
-  --orange3: #904b00;
+  --orange1: #929982;
+  --orange3: #002500;
 
   --blue1: #b9dae4;
-  --blue3: #065f7a;
+  --blue2: #2E5266;
+  --blue3: #1B2A41;
 }
 
 #skip {
@@ -49,8 +50,6 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  color: var(--redwood);
-  background-color: var(--blue3);
 }
 
 img,
@@ -61,7 +60,7 @@ video {
 main {
   padding: 60px 20px; 
   position: relative;
-  top: 120px;
+  top: -17px;
   background-color:#f0f0f0;
   border-radius: 30px;
 }
@@ -70,18 +69,6 @@ h1 {
   font-weight: bold;
   font-size: 50px;
   line-height: 55px;
-}
-
-.pets {
-  color: var(--purple3);
-}
-
-.travel {
-  color: var(--blue3);
-}
-
-.recipe {
-  color: var(--orange3);
 }
 
 h2 {
@@ -96,16 +83,13 @@ h3 {
   line-height: 30px;
 }
 
-/* nav styling start */
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background: rgba(240, 240, 240, 0.5);
-  z-index: 10;
+/* travel globals start */
+.travel-body h2, .travel-body h3 { 
+  color: var(--blue2);
 }
+/* travel globals end */
 
+/* nav start */
 nav ul {
   display: flex;
   flex-direction: row;
@@ -122,37 +106,59 @@ nav li div {
   font-size: 20px;
 }
 
-.navli-pets {
-  border-bottom: solid 3px var(--purple3);
-  color: var(--purple3);
+.nav-wrapper { 
+  padding: 0 0 15px 0;
+  background: #f0f0f0;
 }
+
 .navli-travel {
-  border-bottom: solid 3px var(--blue3);
+  border-bottom: solid 4px var(--blue3);
   color: var(--blue3);
 }
 
-nav li:hover img {
-  animation: bounce 0.5s infinite alternate;
+.navli-pets {
+  border-bottom: solid 4px var(--purple3);
+  color: var(--purple3);
 }
 
 .navli-recipes {
-  border-bottom: solid 3px var(--orange3);
+  border-bottom: solid 4px var(--orange3);
   color: var(--orange3);
 }
-/* nav styling end */
+/* nav end */
+
+/* top of page start */
+.travel-bg { 
+  background-color: var(--blue3);
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+
+.travel {
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 900;
+  margin:  70px auto 30px auto;
+  color: #f0f0f0;
+}
 
 .page-title {
   padding: 50px 0 0 0;
   margin: 50px auto;
   text-align: center;
 }
+/* top of page end */
 
+/* ticker start */
 .ticker-wrap {
   width: 100%;
   overflow: hidden;
   padding-left: 100%;
   position: absolute;
-  top: 100px;
+  top: 90px;
   left: 0;
   right: 0;
   z-index: -1;
@@ -167,30 +173,25 @@ nav li:hover img {
 }
 
 .ticker-item {
-  margin: 0 3rem;
+  margin: 0 3rem 0 0;
+}
+/* ticker end */
+
+/* section start */
+.section { 
+  margin-bottom: 200px;
 }
 
-.travel {
-  font-size: 100px;
-  line-height: 100px;
-  font-weight: 900;
-  margin: 50px auto;
-  outline: #f0f0f0;
+.section:last-child { 
+  margin-bottom: 0px;
 }
+/* section end */
 
-.section {
-  margin-bottom: 100px;
-}
-
-.section div {
-  margin: 10px 0;
-  padding: 10px 0;
-}
-
-/* location title section start */
+/* section title img start */
 .title-img,
 .recipe-title {
   padding: 0 20px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -212,12 +213,11 @@ nav li:hover img {
 .recipe-title img,
 .ticker img {
   border-radius: 50%;
-  /* border: 5px solid var(--pink); */
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
-/* title section end */
+/* section title img end */
 
 /* description start  */
 .bold {
@@ -225,15 +225,23 @@ nav li:hover img {
 }
 
 .description {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .description p {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 /* description end  */
 
 /* photo gallery start  */
+.photo-gallery-container { 
+  margin: 10px 0;
+}
+
+.photo-gallery-container h3 { 
+  padding: 7px 0;
+}
+
 .photo-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -242,30 +250,22 @@ nav li:hover img {
 
 .photo-gallery img {
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .photo-gallery div {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 15px;
-  border-radius: 5px;
+  /* padding: 1px; */
+  border-radius: 10px;
   transition: 0.3s;
 }
 
-/* .photo-gallery div:hover { 
-    background-color: #394053;
-}
-
 .photo-gallery div p { 
-    visibility: hidden;
-    color: white;
-    font-size: 16px;
-} */
-
-.photo-gallery div:hover p {
-  visibility: visible;
+  padding: 15px;
 }
 
 .photo-gallery div:nth-child(3) {
@@ -284,10 +284,10 @@ nav li:hover img {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: var(--purple1); /* Set the background color for the circle */
+  background: var(--purple1);
   border-radius: 50%;
-  left: -19px; /* Offset to the left */
-  top: 20px; /* Offset down */
+  left: -19px;
+  top: 20px; 
   z-index: -1;
   animation: circle 1s infinite linear;
 }
@@ -311,9 +311,9 @@ nav li:hover img {
   color: var(--purple3);
 }
 
-.purple-highlight::before,
-.orange-highlight::before,
-.blue-highlight::before {
+.purple-highlight,
+.orange-highlight,
+.blue-highlight {
   background-color: var(--purple1);
   content: "";
   position: absolute;
@@ -323,22 +323,6 @@ nav li:hover img {
   bottom: 0;
   z-index: -1;
   transform: rotate(-2deg);
-}
-
-.orange-highlight {
-  color: var(--orange3);
-}
-
-.orange-highlight::before {
-  background-color: var(--orange1);
-}
-
-.blue-highlight {
-  color: var(--blue3);
-}
-
-.blue-highlight::before {
-  background-color: var(--blue1);
 }
 
 .title-img .still {
@@ -393,3 +377,7 @@ nav li:hover img {
     transform: translateY(-10px);
   }
 }
+
+/* nav li:hover img {
+  animation: bounce 0.5s infinite alternate;
+} */
