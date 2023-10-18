@@ -3,8 +3,10 @@
   --purple3: #4b2ab5;
   --purple4: #27106b;
 
-  --orange1: #929982;
-  --orange3: #002500;
+  --travel1: #BABFB0;
+  --travel2: #534B62;
+  --travel3: #002500;
+  --travel4: #7D4F3B; 
 
   --blue1: #b9dae4;
   --blue2: #2E5266;
@@ -62,6 +64,8 @@ main {
   position: relative;
   background-color:#f0f0f0;
   border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 h1 {
@@ -83,8 +87,12 @@ h3 {
 }
 
 /* travel globals start */
-.travel-body h2, .travel-body h3 { 
-  color: var(--blue2);
+.travel-body h2 { 
+  color: var(--travel2);
+}
+
+.travel-body h3 { 
+  color: var(--travel4);
 }
 /* travel globals end */
 
@@ -111,8 +119,8 @@ nav li div {
 }
 
 .navli-travel {
-  border-bottom: solid 4px var(--blue3);
-  color: var(--blue3);
+  border-bottom: solid 4px var(--travel3);
+  color: var(--travel3);
 }
 
 .navli-pets {
@@ -121,14 +129,14 @@ nav li div {
 }
 
 .navli-recipes {
-  border-bottom: solid 4px var(--orange3);
-  color: var(--orange3);
+  border-bottom: solid 4px var(--travel3);
+  color: var(--travel3);
 }
 /* nav end */
 
 /* top of page start */
 .travel-bg { 
-  background-color: var(--blue3);
+  background-color: var(--travel3);
   position:absolute;
   top: 0;
   left: 0;
@@ -168,7 +176,7 @@ nav li div {
   display: inline-block;
   white-space: nowrap;
   margin-right: 100%;
-  animation: ticker 10s linear infinite;
+  animation: ticker 15s linear infinite;
 }
 
 .ticker-item {
@@ -205,7 +213,8 @@ nav li div {
 
 .title-img div,
 .recipe-title div {
-  text-align: center;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .title-img img,
@@ -215,6 +224,7 @@ nav li div {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  align-self: flex-end;
 }
 /* section title img end */
 
@@ -261,6 +271,7 @@ nav li div {
   /* padding: 1px; */
   border-radius: 10px;
   transition: 0.3s;
+  background-color: var(--travel1);
 }
 
 .photo-gallery div p { 
@@ -364,7 +375,7 @@ nav li div {
   }
 
   100% {
-    transform: translate3d(-500%, 0, 0);
+    transform: translate3d(-800%, 0, 0);
   }
 }
 
