@@ -1,0 +1,100 @@
+:root {
+  --purple1: #e7e0ff;
+  --purple3: #4b2ab5;
+  --purple4: #27106b;
+
+  --travel1: #babfb0;
+  --travel2: #534b62;
+  --travel3: #002500;
+  --travel4: #7d4f3b;
+
+  --blue1: #b9dae4;
+  --blue2: #2e5266;
+  --blue3: #1b2a41;
+}
+
+#skip {
+  position: absolute;
+  top: -25px;
+}
+
+#skip:focus {
+  top: 15px;
+  left: 10px;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  background: white;
+  border: solid 2px black;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Black.ttf);
+  font-weight: 900;
+}
+
+body {
+  font-family: Montserrat, "Open sans", Arial;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav li div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 30px 10px 10px 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-wrapper {
+  padding: 0 0 15px 0;
+  background: #f0f0f0;
+}
+
+.navli-travel {
+  border-bottom: solid 4px var(--travel3);
+  color: var(--travel3);
+}
+
+.navli-pets {
+  border-bottom: solid 4px var(--purple3);
+  color: var(--purple3);
+}
+
+.navli-recipes {
+  border-bottom: solid 4px var(--travel3);
+  color: var(--travel3);
+}
+
+.bold {
+  font-weight: bold;
+}

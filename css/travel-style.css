@@ -1,0 +1,209 @@
+main {
+  padding: 90px 20px 20px 20px; 
+  position: relative;
+  background-color:#f0f0f0;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 900;
+  margin: 0px auto 80px auto;
+  color: #f0f0f0;
+}
+
+ h2 { 
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--travel2);
+}
+
+h3 { 
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: var(--travel4);
+}
+
+/* top of page start */
+.travel-bg { 
+  background-color: var(--travel3);
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+
+.page-title {
+  padding: 50px 0 0 0;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+/* top of page end */
+
+/* ticker start */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 100%;
+  position: absolute;
+  top: 220px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /* opacity: 50%; */
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 100%;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker-item {
+  margin: 0 3rem 0 0;
+}
+
+.ticker img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ticker end */
+
+/* section start */
+section { 
+  margin-bottom: 200px;
+}
+
+section:last-child { 
+  margin-bottom: 0px;
+}
+/* section end */
+
+/* section title img start */
+.image-wrap {
+  overflow: auto; 
+}
+
+.image-wrap img {
+  float: right; 
+  margin-left: 20px; 
+}
+
+.location-title { 
+  margin-bottom: 10px;
+}
+
+.title-img {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recipe-title {
+  flex-direction: column;
+  text-align: center;
+}
+
+.title-img div {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.title-img img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+/* section title img end */
+
+/* description start  */
+.description {
+  padding: 15px 0;
+}
+/* description end  */
+
+/* photo gallery start  */
+.photo-gallery-container { 
+  margin: 10px 0;
+}
+
+.photo-gallery-container h3 { 
+  padding: 7px 0;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.photo-gallery img {
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.photo-gallery div {
+  box-shadow: 0 0 10px rgba(9, 56, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: var(--travel1);
+}
+
+.photo-gallery div p { 
+  padding: 15px;
+}
+
+.photo-gallery div:nth-child(3) {
+  grid-column: 1/-1;
+}
+/* photo gallery end */
+
+.profile-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.title-img .still {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gif {
+    display: none;
+  }
+  .title-img .still {
+    display: block;
+  }
+  .ticker {
+    animation: none;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(-800%, 0, 0);
+  }
+}
