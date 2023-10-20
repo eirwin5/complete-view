@@ -1,7 +1,7 @@
 main {
-  padding: 90px 20px 20px 20px; 
+  padding: 90px 20px 20px 20px;
   position: relative;
-  background-color:#f0f0f0;
+  background-color: #f0f0f0;
   border-radius: 30px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -15,14 +15,14 @@ h1 {
   color: #f0f0f0;
 }
 
- h2 { 
+h2 {
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
   color: var(--travel2);
 }
 
-h3 { 
+h3 {
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
@@ -30,9 +30,9 @@ h3 {
 }
 
 /* top of page start */
-.travel-bg { 
+.travel-bg {
   background-color: var(--travel3);
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -79,26 +79,26 @@ h3 {
 /* ticker end */
 
 /* section start */
-section { 
+section {
   margin-bottom: 200px;
 }
 
-section:last-child { 
+section:last-child {
   margin-bottom: 0px;
 }
 /* section end */
 
 /* section title img start */
 .image-wrap {
-  overflow: auto; 
+  overflow: auto;
 }
 
 .image-wrap img {
-  float: right; 
-  margin-left: 20px; 
+  float: right;
+  margin-left: 20px;
 }
 
-.location-title { 
+.location-title {
   margin-bottom: 10px;
 }
 
@@ -135,11 +135,11 @@ section:last-child {
 /* description end  */
 
 /* photo gallery start  */
-.photo-gallery-container { 
+.photo-gallery-container {
   margin: 10px 0;
 }
 
-.photo-gallery-container h3 { 
+.photo-gallery-container h3 {
   padding: 7px 0;
 }
 
@@ -165,7 +165,7 @@ section:last-child {
   background-color: var(--travel1);
 }
 
-.photo-gallery div p { 
+.photo-gallery div p {
   padding: 15px;
 }
 
@@ -173,13 +173,6 @@ section:last-child {
   grid-column: 1/-1;
 }
 /* photo gallery end */
-
-.profile-img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
 
 .title-img .still {
   display: none;
