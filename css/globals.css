@@ -12,7 +12,6 @@
   --blue2: #2e5266;
   --blue3: #1b2a41;
 }
-
 #skip {
   position: absolute;
   top: -25px;
@@ -52,6 +51,7 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  background-color: #f0f0f0;
 }
 
 h1 { 
