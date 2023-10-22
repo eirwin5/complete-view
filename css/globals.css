@@ -11,6 +11,7 @@
   --blue1: #b9dae4;
   --blue2: #2e5266;
   --blue3: #1b2a41;
+
 }
 #skip {
   position: absolute;
@@ -104,8 +105,8 @@ nav li div {
 }
 
 .navli-pets {
-  border-bottom: solid 4px var(--purple3);
-  color: var(--purple3);
+  border-bottom: solid 4px #1b2a41;
+  color: #1b2a41;
 }
 
 .navli-recipes {
