@@ -115,3 +115,15 @@ section:first-of-type {
     gap: 5px;
     grid-template-columns: 1fr ;
 } 
+
+.images-grid img:first-child { 
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.images-grid img:last-child { 
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
