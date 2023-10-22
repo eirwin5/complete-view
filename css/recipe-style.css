@@ -34,12 +34,20 @@ header {
     border-radius: 50%;
 }
 
+section { 
+    margin-top: 175px;
+}
+
+section:first-of-type { 
+    margin-top: 0;
+}
+
 .section-padding { 
     padding: 0 20px 0 20px;
 }
 
 .section-header { 
-    padding: 60px 0 30px 0;
+    padding: 60px 0 20px 0;
 }
 
 .section-header img { 
@@ -61,7 +69,7 @@ header {
 }
 
 .ingredients h3 { 
-    color: var(--blue);
+    color: #390099;
 }
 
 .ingredients li, .steps li {
@@ -75,6 +83,7 @@ header {
 
 .description { 
     text-align: center;
+    padding: 10px;
 }
 
 .container { 
@@ -82,20 +91,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0 20px 0;
 }
 
 .circle { 
     position: absolute;
-    transform: translate(-10%, -30%);
-    width: 110%; 
-    z-index: -1; 
-    fill: var(--yellow);
-}
-
-.circle2 { 
-    position: absolute;
-    transform: translate(-10%, -38%);
-    width: 110%; 
+    width: 100%; 
     z-index: -1; 
     fill: var(--yellow);
 }
