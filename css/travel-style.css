@@ -179,6 +179,12 @@ section:last-child {
   .ticker {
     animation: none;
   }
+  main { 
+    padding-top: 30px;
+  }
+  h1 { 
+    margin-bottom: 30px;
+  }
 }
 
 @keyframes ticker {
