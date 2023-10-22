@@ -1,9 +1,14 @@
+:root {
+  --navy: #13293d; 
+  --teal: #5AB1BB; 
+  --grey: #454545; 
+  --brown: #7A5852; 
+  --pink: #F2CCC3; 
+}
+
 h1 {
-  font-size: 80px;
-  line-height: 100px;
-  font-weight: 900;
   text-align: center;
-  color: #7A5852;
+  color: var(--navy);
 }
 
 h2 {
@@ -37,34 +42,34 @@ section:first-of-type {
 }
 
 section:nth-of-type(1) {
-  background-color: #13293d;
+  background-color: var(--brown);
   color: white;
 }
 
 section:nth-of-type(2) { 
-  color: #454545;
+  color: var(--navy);
 }
 
 section:nth-of-type(3) {
-  background-color: #454545;
+  background-color: var(--navy);
   color: white;
 }
 
 section:nth-of-type(4) { 
-  color: #7A5852; 
+  color: var(--brown); 
 }
 
 section:nth-of-type(5) {
-  background-color: #7A5852;
-  color: white;
+  background-color: var(--pink);
+  color: black;
 }
 
 section:nth-of-type(6) { 
-  color: #13293d;
+  color: var(--navy);
 }
 
 section:nth-of-type(7) {
-  background-color: #5AB1BB;
+  background-color: var(--teal);
   color: black;
 }
 

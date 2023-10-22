@@ -13,16 +13,16 @@ h1 {
 }
 
 h2 {
-  color: var(--travel2);
+  color: var(--purple);
 }
 
 h3 {
-  color: var(--travel4);
+  color: var(--burnt-orange);
 }
 
 /* top of page start */
 .travel-bg {
-  background-color: var(--travel3);
+  background-color: var(--dark-green);
   position: absolute;
   top: 0;
   left: 0;
@@ -153,7 +153,7 @@ section:last-child {
   gap: 5px;
   border-radius: 10px;
   transition: 0.3s;
-  background-color: var(--travel1);
+  background-color: var(--sage);
 }
 
 .photo-gallery figcaption {
