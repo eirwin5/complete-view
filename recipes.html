@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/globals.css">
-  <link rel="stylesheet" href="css/recipe-style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/recipe-style.css" />
   <title>Recipes</title>
 </head>
 
@@ -39,20 +39,20 @@
       <p>Click an image to jump to its recipe.</p>
       <div class="links">
         <a href="#cookies">
-          <img src="images/double_chocolate_cookies.png" width="400" alt="double chocolate cookies">
+          <img src="images/double_chocolate_cookies.png" width="400" alt="double chocolate cookies" />
         </a>
         <a href="#pancakes">
-          <img src="images/dutchbaby.JPG" alt="A dutch baby pancake in a pan">
+          <img src="images/dutchbaby.JPG" alt="A dutch baby pancake in a pan" />
         </a>
         <a href="#pesto">
-          <img src="images/pesto_pasta.jpg" alt="Pesto pasta">
+          <img src="images/pesto_pasta.jpg" alt="Pesto pasta" />
         </a>
       </div>
     </header>
     <section id="cookies">
+      <h2>Double Chocolate Cookies</h2>
       <div class="section-header">
-        <h2>Double Chocolate Cookies</h2>
-        <img src="images/double_chocolate_cookies.png" width="400" alt="double chocolate cookies">
+        <img src="images/double_chocolate_cookies.png" width="400" alt="double chocolate cookies" />
         <div class="facts">
           <p><span class="bold">Origin: </span> Michigan</p>
           <p><span class="bold">Source: </span> Family Recipe</p>
@@ -69,64 +69,82 @@
           <div class="description">
             <p>
               My daughter learned to make these cookies at a baking camp at
-              Zingermanns and has tweaked the recipe to fit the taste buds of her
-              siblings. They are extremely sugary so the salt helps to balance it.
-              Note, these cookies are best eaten very quickly.
+              Zingermanns and has tweaked the recipe to fit the taste buds of
+              her siblings. They are extremely sugary so the salt helps to
+              balance it. Note, these cookies are best eaten very quickly.
             </p>
           </div>
         </div>
-        <div class="ingredients">
-          <h3>Recipe Ingredients</h3>
-          <ul>
-            <li>Unsalted butter</li>
-            <li>Granulated Sugar</li>
-            <li>Packed light or dark brown sugar</li>
-            <li>Large egg</li>
-            <li>Pure vanilla extract</li>
-            <li>Semi-sweet chocolate chunks (melted)</li>
-            <li>All-purpose flour</li>
-            <li>Natural unsweetened cocoa powder</li>
-            <li>Baking soda</li>
-            <li>Salt</li>
-            <li>Semi-sweet chocolate chunks</li>
-          </ul>
-        </div>
-        <div class="steps">
-          <h3>Recipe Steps</h3>
-          <ol>
-            <li>
-              In a mixing bowl cream together the butter, granulated sugar, and
-              brown sugar
-            </li>
-            <li>Add the egg and vanilla extract and beat well</li>
-            <li>Add the melted chocolate</li>
-            <li>
-              In a separate bowl combine the flour, baking soda, cocoa powder and
-              salt
-            </li>
-            <li>Combine the wet and dry ingredients</li>
-            <li>Add the unmelted chocolate chunks.</li>
-            <li>Form 15 cookies and place on a baking sheet.</li>
-            <li>Cook for 12 to 13 minutes at 350 degrees.</li>
-          </ol>
+        <div>
+          <div class="ingredients">
+            <h3>Recipe Ingredients</h3>
+            <ul>
+              <li>Unsalted butter</li>
+              <li>Granulated Sugar</li>
+              <li>Packed light or dark brown sugar</li>
+              <li>Large egg</li>
+              <li>Pure vanilla extract</li>
+              <li>Semi-sweet chocolate chunks (melted)</li>
+              <li>All-purpose flour</li>
+              <li>Natural unsweetened cocoa powder</li>
+              <li>Baking soda</li>
+              <li>Salt</li>
+              <li>Semi-sweet chocolate chunks</li>
+            </ul>
+          </div>
+          <div class="steps">
+            <h3>Recipe Steps</h3>
+            <p>Click to see the next step.</p>
+            <div class="recipe-container">
+              <ol>
+                <li value="1" class="active" onclick="showNextItem(this)">
+                  In a mixing bowl cream together the butter, granulated
+                  sugar, and brown sugar
+                </li>
+                <li value="2" onclick="showNextItem(this)">
+                  Add the egg and vanilla extract and beat well
+                </li>
+                <li value="3" onclick="showNextItem(this)">
+                  Add the melted chocolate
+                </li>
+                <li value="4" onclick="showNextItem(this)">
+                  In a separate bowl combine the flour, baking soda, cocoa
+                  powder and salt
+                </li>
+                <li value="5" onclick="showNextItem(this)">
+                  Combine the wet and dry ingredients
+                </li>
+                <li value="6" onclick="showNextItem(this)">
+                  Add the unmelted chocolate chunks.
+                </li>
+                <li value="7" onclick="showNextItem(this)">
+                  Form 15 cookies and place on a baking sheet.
+                </li>
+                <li value="8" onclick="goToFirst(this)">
+                  Cook for 12 to 13 minutes at 350 degrees.
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/double_chocolate_chips.png" width="200" alt="Pile of chocolate chips">
+            <img src="images/double_chocolate_chips.png" width="200" alt="Pile of chocolate chips" />
             <img
               src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-d9ba778.jpg?quality=90&webp=true&resize=600,545"
-              width="200" alt="Chocolate melting in a boiler">
+              width="200" alt="Chocolate melting in a boiler" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Brown_sugar_examples.JPG" width="200"
-              alt="Brown sugar in three different shades of darkness">
+              alt="Brown sugar in three different shades of darkness" />
           </div>
         </div>
       </div>
-    </section> <!-- Colleen van Lent -->
+    </section>
+    <!-- Colleen van Lent -->
     <section id="pancakes">
+      <h2>Dutch Baby Pancakes</h2>
       <div class="section-header">
-        <h2>Dutch Baby Pancakes</h2>
-        <img src="images/dutchbaby.JPG" alt="A dutch baby pancake in a pan">
+        <img src="images/dutchbaby.JPG" alt="A dutch baby pancake in a pan" />
         <div class="facts">
           <p><span class="bold">Origin: </span>Washington</p>
           <p><span class="bold">Source: </span>Self</p>
@@ -142,8 +160,9 @@
           </div>
           <div class="description">
             <p>
-              An eggy sweet pancake. Tastes and smells like nutmeg and sugar. Rises
-              with heat and falls elsewhere. Is essentially a giant crepe.
+              An eggy sweet pancake. Tastes and smells like nutmeg and sugar.
+              Rises with heat and falls elsewhere. Is essentially a giant
+              crepe.
             </p>
           </div>
         </div>
@@ -160,34 +179,38 @@
         </div>
         <div class="steps">
           <h3>Recipe Steps</h3>
-          <ol>
-            <li>preheat oven to 425 degrees</li>
-            <li>Put pan in oven with the oil</li>
-            <li>Mix dry ingredients.</li>
-            <li>Mix eggs and milk</li>
-            <li>Mix all together</li>
-            <li>Let it sit for ten minutes</li>
-            <li>Put in oven for 14 minutes</li>
-            <li>Enjoy</li>
-          </ol>
+          <div>
+            <ol>
+              <li>preheat oven to 425 degrees</li>
+              <li>Put pan in oven with the oil</li>
+              <li>Mix dry ingredients.</li>
+              <li>Mix eggs and milk</li>
+              <li>Mix all together</li>
+              <li>Let it sit for ten minutes</li>
+              <li>Put in oven for 14 minutes</li>
+              <li>Enjoy</li>
+            </ol>
+          </div>
         </div>
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/DutchBabyWithSides.jpg" alt="Dutch baby with sugar" width="200">
-            <img src="images/David-eyres-pancake.jpg" alt="Dutch baby with no salt" width="200">
-            <img src="images/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt="Dutch Baby with cheese and herbs" width="200">
+            <img src="images/DutchBabyWithSides.jpg" alt="Dutch baby with sugar" width="200" />
+            <img src="images/David-eyres-pancake.jpg" alt="Dutch baby with no salt" width="200" />
+            <img src="images/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt="Dutch Baby with cheese and herbs" width="200" />
           </div>
         </div>
       </div>
-    </section> <!--Danny Mo danmor-->
+    </section>
+    <!--Danny Mo danmor-->
     <section id="pesto">
+      <h2>Pesto Pasta</h2>
       <div class="section-header">
-        <h2>Pesto Pasta</h2>
-        <img src="images/pesto_pasta.jpg" alt="Pesto pasta">
+        <img src="images/pesto_pasta.jpg" alt="Pesto pasta" />
         <div class="facts">
           <p><span class="bold">Origin: </span>Italian</p>
-          <p><span class="bold">Source: </span><a
+          <p>
+            <span class="bold">Source: </span><a
               href="https://www.simplyrecipes.com/recipes/fresh_basil_pesto/">simplyrecipes</a>
           </p>
           <p><span class="bold">Category: </span>Main Dish</p>
@@ -202,12 +225,12 @@
           </div>
           <div class="description">
             <p>
-              Pesto pasta has always been a comfort dish for me; it’s quick, it’s
-              easy, and great food for a dinner party or a comfy night in! It
-              requires six main ingredients, plus additional spices as you see fit.
-              If you’re not in the mood for pasta, you can always eat the pesto
-              sauce on bread, crackers, or eggs! This recipe makes enough for around
-              4 people, so adjust accordingly.
+              Pesto pasta has always been a comfort dish for me; it’s quick,
+              it’s easy, and great food for a dinner party or a comfy night
+              in! It requires six main ingredients, plus additional spices as
+              you see fit. If you’re not in the mood for pasta, you can always
+              eat the pesto sauce on bread, crackers, or eggs! This recipe
+              makes enough for around 4 people, so adjust accordingly.
             </p>
           </div>
         </div>
@@ -215,56 +238,86 @@
           <h3>Recipe Ingredients</h3>
           <ul>
             <li>
-              2 cups fresh basil leaves, packed (can add some spinach if you don't
-              have enough basil leaves)
+              2 cups fresh basil leaves, packed (can add some spinach if you
+              don't have enough basil leaves)
             </li>
             <li>¾ cup freshly grated Parmesan or Romano cheese</li>
             <li>½ cup extra virgin olive oil</li>
-            <li>⅓ cup pine nuts (can sub with same amount of chopped walnuts)</li>
+            <li>
+              ⅓ cup pine nuts (can sub with same amount of chopped walnuts)
+            </li>
             <li>3 cloves garlic, minced</li>
             <li>Salt & pepper to taste</li>
             <li>
-              8 oz of your choice of pasta (my preferred is penne, but any type
-              will work)
+              8 oz of your choice of pasta (my preferred is penne, but any
+              type will work)
             </li>
           </ul>
         </div>
         <div class="steps">
           <h3>Recipe Steps</h3>
-          <ol>
-            <li>
-              Heat up water in a pot for the pasta and put in a teaspoon of salt.
-            </li>
-            <li>
-              Pulse the basil and pine nuts in a food processor. Add a bit of
-              olive oil as need be if the ingredients are too dry.
-            </li>
-            <li>Add the garlic and cheese to the food processor.</li>
-            <li>
-              Once water starts boiling in the pot, add pasta. Stir every couple
-              of minutes.
-            </li>
-            <li>
-              While the food processor is running, slowly pour in olive oil.
-            </li>
-            <li>
-              Once pasta is al-dente, turn off the heat and drain the pasta water.
-              Save some of it if you want your pesto to be slightly thinner.
-            </li>
-            <li>Add the pasta back into the pot, mix in the pesto, and voila!</li>
-          </ol>
+          <p>Click to see the next step.</p>
+          <div class="recipe-container">
+            <ol>
+              <li value="1" onclick="showNextItem(this)" class="active">
+                Heat up water in a pot for the pasta and put in a teaspoon of
+                salt.
+              </li>
+              <li value="2" onclick="showNextItem(this)">
+                Pulse the basil and pine nuts in a food processor. Add a bit
+                of olive oil as need be if the ingredients are too dry.
+              </li>
+              <li value="3" onclick="showNextItem(this)">
+                Add the garlic and cheese to the food processor.
+              </li>
+              <li value="4" onclick="showNextItem(this)">
+                Once water starts boiling in the pot, add pasta. Stir every
+                couple of minutes.
+              </li>
+              <li value="5" onclick="showNextItem(this)">
+                While the food processor is running, slowly pour in olive oil.
+              </li>
+              <li value="6" onclick="showNextItem(this)">
+                Once pasta is al-dente, turn off the heat and drain the pasta
+                water. Save some of it if you want your pesto to be slightly
+                thinner.
+              </li>
+              <li value="7" onclick="goToFirst(this)">
+                Add the pasta back into the pot, mix in the pesto, and voila!
+              </li>
+            </ol>
+          </div>
         </div>
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/dinner_spread.JPG" alt="Pesto pasta served at a table" width="200">
-            <img src="images/pesto-on-a-baguette.jpg" alt="Pesto spread on a slice of bread" width="200">
-            <img src="images/pesto-eggs.jpg" alt="Eggs cooked in pesto on two slices of toast" width="200">
+            <img src="images/dinner_spread.JPG" alt="Pesto pasta served at a table" width="200" />
+            <img src="images/pesto-on-a-baguette.jpg" alt="Pesto spread on a slice of bread" width="200" />
+            <img src="images/pesto-eggs.jpg" alt="Eggs cooked in pesto on two slices of toast" width="200" />
           </div>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    function showNextItem(item) {
+      const nextItem = item.nextElementSibling;
+      if (nextItem) {
+        item.classList.remove("active");
+        nextItem.classList.add("active");
+      }
+    }
+
+    function goToFirst(item) {
+      const ol = item.parentElement;
+      console.log(ol);
+      const firstItem = ol.querySelector("li");
+      console.log(firstItem);
+
+      item.classList.remove("active");
+      firstItem.classList.add("active");
+    }
+  </script>
 </body>
 
 </html>

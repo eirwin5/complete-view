@@ -204,9 +204,6 @@ section:last-child {
 }
 
 @media only screen and (max-width: 600px) {
-  /* .image-wrap img { 
-    display: block;
-  } */
   .location-title img { 
     display: none;
   }
