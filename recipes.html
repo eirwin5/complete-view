@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/globals.css" />
   <link rel="stylesheet" href="css/recipe-style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+  <link href="/node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
   <title>Recipes</title>
 </head>
 
@@ -14,6 +17,7 @@
   <div class="nav">
     <a id="skip" href="#main-content">Skip to Main Content</a>
     <nav class="nav-wrapper">
+      <h1 class="nav-title">The Common Project</h1>
       <ul>
         <li>
           <div>
@@ -96,31 +100,31 @@
             <h3>Recipe Steps</h3>
             <p>Click to see the next step.</p>
             <div class="recipe-container">
-              <ol>
-                <li value="1" class="active" onclick="showNextItem(this)">
+              <ol id="cookies-steps">
+                <li value="1" class="active" onclick="showNextItem('cookies-steps')">
                   In a mixing bowl cream together the butter, granulated
                   sugar, and brown sugar
                 </li>
-                <li value="2" onclick="showNextItem(this)">
+                <li value="2" onclick="showNextItem('cookies-steps')">
                   Add the egg and vanilla extract and beat well
                 </li>
-                <li value="3" onclick="showNextItem(this)">
+                <li value="3" onclick="showNextItem('cookies-steps')">
                   Add the melted chocolate
                 </li>
-                <li value="4" onclick="showNextItem(this)">
+                <li value="4" onclick="showNextItem('cookies-steps')">
                   In a separate bowl combine the flour, baking soda, cocoa
                   powder and salt
                 </li>
-                <li value="5" onclick="showNextItem(this)">
+                <li value="5" onclick="showNextItem('cookies-steps')">
                   Combine the wet and dry ingredients
                 </li>
-                <li value="6" onclick="showNextItem(this)">
+                <li value="6" onclick="showNextItem('cookies-steps')">
                   Add the unmelted chocolate chunks.
                 </li>
-                <li value="7" onclick="showNextItem(this)">
+                <li value="7" onclick="showNextItem('cookies-steps')">
                   Form 15 cookies and place on a baking sheet.
                 </li>
-                <li value="8" onclick="goToFirst(this)">
+                <li value="8" onclick="goToFirst('cookies-steps')">
                   Cook for 12 to 13 minutes at 350 degrees.
                 </li>
               </ol>
@@ -130,12 +134,26 @@
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/double_chocolate_chips.png" width="200" alt="Pile of chocolate chips" />
-            <img
-              src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-d9ba778.jpg?quality=90&webp=true&resize=600,545"
-              width="200" alt="Chocolate melting in a boiler" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Brown_sugar_examples.JPG" width="200"
-              alt="Brown sugar in three different shades of darkness" />
+            <figure>
+              <a href="images/double_chocolate_chips.png" data-lightbox="cookies">
+                <img src="images/double_chocolate_chips.png" width="200" alt="Pile of chocolate chips" />
+              </a>
+            </figure>
+            <figure>
+              <a href="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-d9ba778.jpg?quality=90&webp=true&resize=600,545"
+                data-lightbox="cookies">
+                <img
+                  src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-d9ba778.jpg?quality=90&webp=true&resize=600,545"
+                  width="200" alt="Chocolate melting in a boiler" />
+              </a>
+            </figure>
+            <figure>
+              <a href="https://upload.wikimedia.org/wikipedia/commons/8/82/Brown_sugar_examples.JPG"
+                data-lightbox="cookies">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Brown_sugar_examples.JPG" width="200"
+                  alt="Brown sugar in three different shades of darkness" />
+              </a>
+            </figure>
           </div>
         </div>
       </div>
@@ -180,7 +198,7 @@
         <div class="steps">
           <h3>Recipe Steps</h3>
           <div>
-            <ol>
+            <ol class="pancakes-steps">
               <li>preheat oven to 425 degrees</li>
               <li>Put pan in oven with the oil</li>
               <li>Mix dry ingredients.</li>
@@ -195,9 +213,22 @@
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/DutchBabyWithSides.jpg" alt="Dutch baby with sugar" width="200" />
-            <img src="images/David-eyres-pancake.jpg" alt="Dutch baby with no salt" width="200" />
-            <img src="images/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt="Dutch Baby with cheese and herbs" width="200" />
+            <figure>
+              <a data-lightbox="pancakes" href="images/DutchBabyWithSides.jpg">
+                <img src="images/DutchBabyWithSides.jpg" alt="Dutch baby with sugar" width="200" />
+              </a>
+            </figure>
+            <figure>
+              <a data-lightbox="pancakes" href="images/David-eyres-pancake.jpg">
+                <img src="images/David-eyres-pancake.jpg" alt="Dutch baby with no salt" width="200" />
+              </a>
+            </figure>
+            <figure>
+              <a data-lightbox="pancakes" href="images/Savory-Herb-Butter-Dutch-Baby-1.jpg">
+                <img src="images/Savory-Herb-Butter-Dutch-Baby-1.jpg" alt="Dutch Baby with cheese and herbs"
+                  width="200" />
+              </a>
+            </figure>
           </div>
         </div>
       </div>
@@ -258,31 +289,31 @@
           <h3>Recipe Steps</h3>
           <p>Click to see the next step.</p>
           <div class="recipe-container">
-            <ol>
-              <li value="1" onclick="showNextItem(this)" class="active">
+            <ol id="pesto-steps">
+              <li value="1" onclick="showNextItem('pesto-steps')" class="active">
                 Heat up water in a pot for the pasta and put in a teaspoon of
                 salt.
               </li>
-              <li value="2" onclick="showNextItem(this)">
+              <li value="2" onclick="showNextItem('pesto-steps')">
                 Pulse the basil and pine nuts in a food processor. Add a bit
                 of olive oil as need be if the ingredients are too dry.
               </li>
-              <li value="3" onclick="showNextItem(this)">
+              <li value="3" onclick="showNextItem('pesto-steps')">
                 Add the garlic and cheese to the food processor.
               </li>
-              <li value="4" onclick="showNextItem(this)">
+              <li value="4" onclick="showNextItem('pesto-steps')">
                 Once water starts boiling in the pot, add pasta. Stir every
                 couple of minutes.
               </li>
-              <li value="5" onclick="showNextItem(this)">
+              <li value="5" onclick="showNextItem('pesto-steps')">
                 While the food processor is running, slowly pour in olive oil.
               </li>
-              <li value="6" onclick="showNextItem(this)">
+              <li value="6" onclick="showNextItem('pesto-steps')">
                 Once pasta is al-dente, turn off the heat and drain the pasta
                 water. Save some of it if you want your pesto to be slightly
                 thinner.
               </li>
-              <li value="7" onclick="goToFirst(this)">
+              <li value="7" onclick="goToFirst('pesto-steps')">
                 Add the pasta back into the pot, mix in the pesto, and voila!
               </li>
             </ol>
@@ -291,31 +322,49 @@
         <div class="food-images">
           <h3>Additional Food images</h3>
           <div class="images-grid">
-            <img src="images/dinner_spread.JPG" alt="Pesto pasta served at a table" width="200" />
-            <img src="images/pesto-on-a-baguette.jpg" alt="Pesto spread on a slice of bread" width="200" />
-            <img src="images/pesto-eggs.jpg" alt="Eggs cooked in pesto on two slices of toast" width="200" />
+            <figure>
+              <a href="images/dinner_spread.JPG" data-lightbox="pesto">
+                <img src="images/dinner_spread.JPG" alt="Pesto pasta served at a table" width="200" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/pesto-on-a-baguette.jpg" data-lightbox="pesto">
+                <img src="images/pesto-on-a-baguette.jpg" alt="Pesto spread on a slice of bread" width="200" />
+              </a>
+            </figure>
+            <figure>
+              <a href="images/pesto-eggs.jpg" data-lightbox="pesto">
+                <img src="images/pesto-eggs.jpg" alt="Eggs cooked in pesto on two slices of toast" width="200" />
+              </a>
+            </figure>
           </div>
         </div>
       </div>
     </section>
   </main>
   <script>
-    function showNextItem(item) {
-      const nextItem = item.nextElementSibling;
-      if (nextItem) {
-        item.classList.remove("active");
-        nextItem.classList.add("active");
-      }
+    function showNextItem(olId) {
+      // Hide the currently active item within the specified ol
+      $("#" + olId + " li.active").slideUp("fast", function () {
+        $(this).removeClass("active");
+
+        // Show the next item within the specified ol
+        $(this).next("li").slideDown("fast", function () {
+          $(this).addClass("active");
+        });
+      });
     }
 
-    function goToFirst(item) {
-      const ol = item.parentElement;
-      console.log(ol);
-      const firstItem = ol.querySelector("li");
-      console.log(firstItem);
+    function goToFirst(olId) {
+      // Hide all items except the first one within the specified ol
+      $("#" + olId + " li").not(":first").slideUp("fast", function () {
+        $(this).removeClass("active");
+      });
 
-      item.classList.remove("active");
-      firstItem.classList.add("active");
+      // Show the first item within the specified ol and make it active
+      $("#" + olId + " li:first").slideDown("fast", function () {
+        $(this).addClass("active");
+      });
     }
   </script>
 </body>

@@ -123,3 +123,31 @@ nav li div {
   height: 200px;
   object-fit: cover;
 }
+
+.nav-title { 
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .nav-wrapper { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: baseline;
+  } 
+
+  .nav-title { 
+    display: block;
+    color: black;
+    font-size: 25px;
+    line-height: 25px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  ul { 
+    gap: 5px;
+  }
+}
