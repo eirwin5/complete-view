@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <div class="nav">
-    <a id="skip" href="#main-content">Skip to Main Content</a>
-    <nav class="nav-wrapper">
-      <h1 id="nav-title">The Common Project</h1>
+  <a id="skip" href="#main-content">Skip to Main Content</a>
+  <div class="nav-wrapper">
+    <h1 id="nav-title">Common Project</h1>
+    <nav>
       <ul>
         <li>
           <div>
@@ -99,32 +99,34 @@
           <div class="steps">
             <h3>Recipe Steps</h3>
             <p>Click to see the next step.</p>
+            <button onclick="showall('cookies-steps')">show all steps</button>
             <div class="recipe-container">
               <ol id="cookies-steps">
-                <li value="1" class="active" onclick="showNextItem('cookies-steps')">
+                <li value="1" class="active" onclick="showNextItem('cookies-steps')"
+                  onkeydown="showNextItem('cookies-steps')">
                   In a mixing bowl cream together the butter, granulated
                   sugar, and brown sugar
                 </li>
-                <li value="2" onclick="showNextItem('cookies-steps')">
+                <li value="2" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Add the egg and vanilla extract and beat well
                 </li>
-                <li value="3" onclick="showNextItem('cookies-steps')">
+                <li value="3" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Add the melted chocolate
                 </li>
-                <li value="4" onclick="showNextItem('cookies-steps')">
+                <li value="4" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   In a separate bowl combine the flour, baking soda, cocoa
                   powder and salt
                 </li>
-                <li value="5" onclick="showNextItem('cookies-steps')">
+                <li value="5" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Combine the wet and dry ingredients
                 </li>
-                <li value="6" onclick="showNextItem('cookies-steps')">
+                <li value="6" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Add the unmelted chocolate chunks.
                 </li>
-                <li value="7" onclick="showNextItem('cookies-steps')">
+                <li value="7" onclick="showNextItem('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Form 15 cookies and place on a baking sheet.
                 </li>
-                <li value="8" onclick="goToFirst('cookies-steps')">
+                <li value="8" onclick="goToFirst('cookies-steps')" onkeydown="showNextItem('cookies-steps')">
                   Cook for 12 to 13 minutes at 350 degrees.
                 </li>
               </ol>
@@ -290,30 +292,31 @@
           <p>Click to see the next step.</p>
           <div class="recipe-container">
             <ol id="pesto-steps">
-              <li value="1" onclick="showNextItem('pesto-steps')" class="active">
+              <li value="1" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')"
+                class="active">
                 Heat up water in a pot for the pasta and put in a teaspoon of
                 salt.
               </li>
-              <li value="2" onclick="showNextItem('pesto-steps')">
+              <li value="2" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 Pulse the basil and pine nuts in a food processor. Add a bit
                 of olive oil as need be if the ingredients are too dry.
               </li>
-              <li value="3" onclick="showNextItem('pesto-steps')">
+              <li value="3" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 Add the garlic and cheese to the food processor.
               </li>
-              <li value="4" onclick="showNextItem('pesto-steps')">
+              <li value="4" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 Once water starts boiling in the pot, add pasta. Stir every
                 couple of minutes.
               </li>
-              <li value="5" onclick="showNextItem('pesto-steps')">
+              <li value="5" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 While the food processor is running, slowly pour in olive oil.
               </li>
-              <li value="6" onclick="showNextItem('pesto-steps')">
+              <li value="6" onclick="showNextItem('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 Once pasta is al-dente, turn off the heat and drain the pasta
                 water. Save some of it if you want your pesto to be slightly
                 thinner.
               </li>
-              <li value="7" onclick="goToFirst('pesto-steps')">
+              <li value="7" onclick="goToFirst('pesto-steps')" onkeydown="showNextItem('pesto-steps')">
                 Add the pasta back into the pot, mix in the pesto, and voila!
               </li>
             </ol>
@@ -344,11 +347,9 @@
   </main>
   <script>
     function showNextItem(olId) {
-      // Hide the currently active item within the specified ol
       $("#" + olId + " li.active").slideUp("fast", function () {
         $(this).removeClass("active");
 
-        // Show the next item within the specified ol
         $(this).next("li").slideDown("fast", function () {
           $(this).addClass("active");
         });
@@ -356,12 +357,10 @@
     }
 
     function goToFirst(olId) {
-      // Hide all items except the first one within the specified ol
       $("#" + olId + " li").not(":first").slideUp("fast", function () {
         $(this).removeClass("active");
       });
 
-      // Show the first item within the specified ol and make it active
       $("#" + olId + " li:first").slideDown("fast", function () {
         $(this).addClass("active");
       });
