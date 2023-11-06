@@ -124,7 +124,7 @@ nav li div {
   object-fit: cover;
 }
 
-.nav-title { 
+#nav-title { 
   display: none;
 }
 
@@ -137,7 +137,7 @@ nav li div {
     align-items: baseline;
   } 
 
-  .nav-title { 
+  #nav-title { 
     display: block;
     color: black;
     font-size: 25px;
