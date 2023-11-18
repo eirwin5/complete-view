@@ -1,364 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/travel-style.css" />
+    <script
+      src="https://kit.fontawesome.com/dbc2de0a2d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Commmon Project</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/globals.css">
-  <link rel="stylesheet" href="css/travel-style.css">
-  <title>Commmon Project</title>
-</head>
-
-<body class="travel-body">
-  <a id="skip" href="#main-content">Skip to Main Content</a>
-  <div class="nav-wrapper">
-    <h1 id="nav-title">Common Project</h1>
-    <nav>
-      <ul>
-        <li>
-          <div class="navli-travel">
-            <a href="index.html">Travel</a>
+  <body class="travel-body">
+    <a id="skip" href="#main-content">Skip to Main Content</a>
+    <div class="nav-wrapper">
+      <h1 id="nav-title">Common Project</h1>
+      <nav>
+        <ul>
+          <li>
+            <div class="navli-travel">
+              <a href="index.html">Travel</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="recipes.html">Recipes</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="pets.html">Pets</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="travel-bg">
+      <header>
+        <div class="page-title">
+          <h1 class="travel">Travel</h1>
+        </div>
+        <div class="ticker-wrap">
+          <div class="ticker">
+            <img
+              class="ticker-item"
+              width="400"
+              src="images/pictured_rocks_profile.webp"
+              alt="Pictured rocks landscape"
+            />
+            <img
+              class="ticker-item"
+              src="images/sequoia_national_park.jpg"
+              alt="River between mountains"
+              width="400"
+            />
+            <img
+              class="ticker-item"
+              src="images/yellowstone_cauldron.jpg"
+              width="400"
+              alt="Bubbling cauldron"
+            />
+            <img
+              class="ticker-item"
+              src="images/acadia-prof.gif"
+              alt="Lake between mountains"
+              width="400"
+            />
           </div>
-        </li>
-        <li>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <div class="pick-location-animation">
+          <div class="dynamic-title">
+            <p>Let's go to...</p>
+            <h2 id="pin-name"></h2>
+          </div>
           <div>
-            <a href="recipes.html">Recipes</a>
+            <div id="display">Hover over an pin on the map below.</div>
           </div>
-        </li>
-        <li>
-          <div>
-            <a href="pets.html">Pets</a>
+          <div class="us-container">
+            <img src="images/us-map.svg" alt="outline of united states" />
+            <a href="#picturedrocks"
+              ><i
+                class="fa-solid fa-location-dot picturedrocks-location"
+                onmouseover="update('pr')"
+                onfocus="update('pr')"
+                onblur="reset()"
+                onmouseleave="reset()"
+              ></i
+            ></a>
+            <a href="#yellowstone"
+              ><i
+                class="fa-solid fa-location-dot yellowstone-location"
+                onmouseover="update('ys')"
+                onfocus="update('ys')"
+                onblur="reset()"
+                onmouseleave="reset()"
+              ></i
+            ></a>
+            <a href="#acadia"
+              ><i
+                class="fa-solid fa-location-dot acadia-location"
+                onmouseover="update('ac')"
+                onfocus="update('ac')"
+                onblur="reset()"
+                onmouseleave="reset()"
+              ></i
+            ></a>
+            <a href="#sequoia">
+              <i
+                class="fa-solid fa-location-dot sequoia-location"
+                onmouseover="update('sq')"
+                onfocus="update('sq')"
+                onblur="reset()"
+                onmouseleave="reset()"
+              ></i>
+            </a>
           </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="travel-bg">
-    <header>
-      <div class="page-title">
-        <h1 class="travel">Travel</h1>
-      </div>
-      <div class="ticker-wrap">
-        <div class="ticker">
-          <img class="ticker-item" width="400" src="images/pictured_rocks_profile.webp" alt="Pictured rocks landscape">
-          <img class="ticker-item" src="images/sequoia_national_park.jpg" alt="River between mountains" width="400">
-          <img class="ticker-item" src="images/yellowstone_cauldron.jpg" width="400" alt="Bubbling cauldron">
-          <img class="ticker-item" src="images/Banff_National_Park.JPG" alt="Lake between mountains" width="400">
         </div>
-      </div>
-    </header>
-    <main id="main-content">
-      <section>
-        <div class="title-img">
-          <div class="image-wrap">
-            <img class="still" width="400" src="images/pictured_rocks_profile.webp" alt="Pictured rocks landscape">
-            <img class="gif" width="400" src="images/natpark.gif" alt="Gif of sunrise national park">
-            <p>
-              Pictured Rocks National Lakeshore, America’s first National Lakeshore,
-              is along the southern shore of Lake Superior in Michigan’s beautiful
-              Upper Peninsula. With stunning beaches, 10 inland lakes, and nearly
-              100 miles of trails, everyone can find something to enjoy at Pictured
-              Rocks!
-            </p>
-            <p>
-              No matter the time of year, there is something to do at Pictured
-              Rocks! Summer: visit beaches, backpack, and camp (permit required).
-              Looking for views of the cliffs? The best way to see the cliffs is
-              from the water on a commercial boat tour. Fall: Autumn colors in the
-              Upper Peninsula are often breathtaking, drive the park roads to view
-              the changing leaves! Hunting and fishing opportunities (state
-              regulations apply) abound during fall! Winter: Cold weather brings
-              otherworldly frozen waterfalls, called “curtains”. Snowshoeing,
-              skiing, and ice fishing are other popular winter activities. Check
-              road closures and conditions before heading into the park in the
-              winter. Spring: Go birding or walk the marsh trail!
-            </p>
-          </div>
-          <div class="location-title">
-            <div class="title">
-              <h2>Pictured Rocks National Lakeshore</h2>
-              <p><span class="bold">Location:</span> North America</p>
+        <section id="picturedrocks">
+          <div class="title-img">
+            <div class="image-wrap">
+              <img
+                class="still"
+                width="400"
+                src="images/pictured_rocks_profile.webp"
+                alt="Pictured rocks landscape"
+              />
+              <img
+                class="gif"
+                width="400"
+                src="images/natpark.gif"
+                alt="Gif of sunrise national park"
+              />
+              <p>
+                Pictured Rocks National Lakeshore, America’s first National
+                Lakeshore, is along the southern shore of Lake Superior in
+                Michigan’s beautiful Upper Peninsula. With stunning beaches, 10
+                inland lakes, and nearly 100 miles of trails, everyone can find
+                something to enjoy at Pictured Rocks!
+                <br />
+                No matter the time of year, there is something to do at Pictured
+                Rocks! Summer: visit beaches, backpack, and camp (permit
+                required). Looking for views of the cliffs? The best way to see
+                the cliffs is from the water on a commercial boat tour. Fall:
+                Autumn colors in the Upper Peninsula are often breathtaking,
+                drive the park roads to view the changing leaves! Hunting and
+                fishing opportunities (state regulations apply) abound during
+                fall! Winter: Cold weather brings otherworldly frozen
+                waterfalls, called “curtains”. Snowshoeing, skiing, and ice
+                fishing are other popular winter activities. Check road closures
+                and conditions before heading into the park in the winter.
+                Spring: Go birding or walk the marsh trail!
+              </p>
             </div>
-            <img class="still" width="400" src="images/pictured_rocks_profile.webp" alt="Pictured rocks landscape">
-            <img class="gif" width="400" src="images/natpark.gif" alt="Gif of sunrise national park">
-          </div>
-        </div>
-        <div class="photo-gallery-container">
-          <h3>Photo Gallery</h3>
-          <div class="photo-gallery">
-            <figure>
-              <img width="400" src="images/pictured_rocks_sunset.jpeg" alt="Pictured rocks at sunset">
-              <figcaption>
-                The pictured rocks lakeshore is stunning at sunset.
-              </figcaption>
-            </figure>
-            <figure>
-              <img width="400" src="images/pictured_rocks_beach.jpeg" alt="A beach in the daytime with mountains">
-              <figcaption>
-                The pictured rocks beach is an amazing place to spend a day in
-                Munising.
-              </figcaption>
-            </figure>
-            <figure>
-              <img width="400" src="images/pictured_rocks_miners_falls.jpeg" alt="A waterfall in a forest">
-              <figcaption>
-                Miners falls is one of Pictured Rocks’ many waterfalls and
-                gorgeous hikes.
-              </figcaption>
-            </figure>
-            <figure>
-              <img width="400" src="images/pictured_rocks_arch.jpeg" alt="An arch at pictured rocks">
-              <figcaption>
-                One of the many lakeshore views is an arch over the water.
-              </figcaption>
-            </figure>
-            <figure>
-              <img width="400" src="images/pictured_rocks_camping.jpeg" alt="Tents in a forest">
-              <figcaption>Pictured Rocks also features campsites.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="title-img">
-          <div class="image-wrap">
-            <img class="gif" src="images/yellowstone_cauldron.gif" width="400" alt="Bubbling cauldron.">
-            <img class="still" src="images/yellowstone_cauldron.jpg" width="400" alt="Bubbling cauldron">
-            <p>
-              Yellowstone is the first national park in the United States. It covers
-              over 2.2 million acres, and provides an opportunity to see wildlife
-              and explore geothermal areas. In fact, Yellowstone contains about half
-              the world's active geysers.
-            </p>
-            <p>
-              These unique opportunities also bring out a lot of bad decisions among
-              the tourists. Every year visitors injure themselves or the wildlife by
-              getting close to the animals. You can see examples of people making
-              bad decisions by visiting
-              <a href="https://www.facebook.com/groups/yellowstonenationalparkinvasionoftheidiots/">Yellowstone National
-                Park:
-                Invasion of the Idiots</a>,
-              <a href="https://www.instagram.com/touronsofyellowstone/?hl=en">Tourons of Yellowstone</a>, or <a
-                href="https://cowboystatedaily.com/">Cowboy State Daily</a>.
-            </p>
-          </div>
-          <div class="location-title">
-            <div class="title">
-              <h2>Yellowstone</h2>
-              <p><span class="bold">Location: </span>North America</p>
+            <div class="location-title">
+              <div class="title">
+                <h2>Pictured Rocks National Lakeshore</h2>
+                <p><span class="bold">Location:</span> North America</p>
+              </div>
+              <img
+                class="still"
+                width="400"
+                src="images/pictured_rocks_profile.webp"
+                alt="Pictured rocks landscape"
+              />
+              <img
+                class="gif"
+                width="400"
+                src="images/natpark.gif"
+                alt="Gif of sunrise national park"
+              />
+              <div class="desktop-title">
+                <h2>Pictured Rocks National Lakeshore</h2>
+                <p><span class="bold">Location:</span> North America</p>
+              </div>
+              <p class="description">
+                Pictured Rocks National Lakeshore, America’s first National
+                Lakeshore, is along the southern shore of Lake Superior in
+                Michigan’s beautiful Upper Peninsula. With stunning beaches, 10
+                inland lakes, and nearly 100 miles of trails, everyone can find
+                something to enjoy at Pictured Rocks!
+                <br />
+                No matter the time of year, there is something to do at Pictured
+                Rocks! Summer: visit beaches, backpack, and camp (permit
+                required). Looking for views of the cliffs? The best way to see
+                the cliffs is from the water on a commercial boat tour. Fall:
+                Autumn colors in the Upper Peninsula are often breathtaking,
+                drive the park roads to view the changing leaves! Hunting and
+                fishing opportunities (state regulations apply) abound during
+                fall! Winter: Cold weather brings otherworldly frozen
+                waterfalls, called “curtains”. Snowshoeing, skiing, and ice
+                fishing are other popular winter activities. Check road closures
+                and conditions before heading into the park in the winter.
+                Spring: Go birding or walk the marsh trail!
+              </p>
             </div>
-            <img class="gif" src="images/yellowstone_cauldron.gif" width="400" alt="Bubbling cauldron.">
-            <img class="still" src="images/yellowstone_cauldron.jpg" width="400" alt="Bubbling cauldron">
           </div>
-        </div>
-        <div class="photo-gallery-container">
-          <h3>Photo Gallery</h3>
-          <div class="photo-gallery">
-            <figure>
-              <img src="images/yellowstone_travertine.JPG" width="200" alt="A large mound of multi-colored travertine">
-              <figcaption>
-                Mammoth Hot Springs has a number of actively forming Travertine
-                terraces.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/yellowstone_sulphur_springs.JPG" width="200"
-                alt="A large spring with clouds of sulfur smoke rising from it.">
-              <figcaption>
-                If you can handle the odor, the Yellowstone Sulphur Springs is a
-                great place to hike.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/yellowstone_sunset.jpg" width="200"
-                alt="Sunset over mountains with some charred trees in the foreground">
-              <figcaption>
-                The drive to Lamar Valley requires some dangerous roads. But the
-                result is amazing sunset views.
-              </figcaption>
-            </figure>
-            <figure>
-              <video width="200" controls>
-                <source src="images/yellowstone_prism.MOV">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption>
-                The multicolored layers get their hues from different species of
-                bacteria living in the cooler water around the spring.
-              </figcaption>
-            </figure>
-            <figure>
-              <video width="200" controls>
-                <source src="images/yellowstone_buffalo.MOV">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption>
-                The buffalo were so common along the roads in Yellowstone that our
-                mantra became "If it ain't lickin the car, we aren't stopping."
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section> <!-- Colleen van Lent -->
-      <section>
-        <div class="title-img">
-          <div class="image-wrap">
-            <img class="gif" src="images/sequoia_national_park.gif" alt="Moving image of river between moutains"
-              width="400">
-            <img class="still" src="images/sequoia_national_park.jpg" alt="River between mountains" width="400">
-            <p>
-              Sequoia National Park is a large forest located in the Sierra Nevada
-              mountain range in California. It is famous for its gigantic sequoia
-              and redwood trees, as well as its underground Crystal Cave. The park
-              is a well-known attraction to many tourists, receiving more than a
-              million visitors annually. In addition to its collection of giant
-              trees, Sequoia National Park is also home to thousands of prevalent
-              flora and fauna.
-            </p>
-            <p>
-              Perhaps the most famous feature of Sequoia National Park is the
-              General Sherman tree – the largest tree in the world. Measuring in at
-              275 feet tall, the tree towers over the surrounding landscape and the
-              people who come to view it. As of today, the General Sherman tree is
-              estimated to be around 2200 years old.
-            </p>
-          </div>
-          <div class="location-title">
-            <div class="title">
-              <h2>Sequoia National Park</h2>
-              <p><span class="bold">Location:</span> North America</p>
+          <div class="photo-gallery-container">
+            <h3>Photo Gallery</h3>
+            <div class="photo-gallery">
+              <figure>
+                <img
+                  width="400"
+                  src="images/pictured_rocks_sunset.jpeg"
+                  alt="Pictured rocks at sunset"
+                />
+                <figcaption>
+                  The pictured rocks lakeshore is stunning at sunset.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  width="400"
+                  src="images/pictured_rocks_beach.jpeg"
+                  alt="A beach in the daytime with mountains"
+                />
+                <figcaption>
+                  The pictured rocks beach is an amazing place to spend a day in
+                  Munising.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  width="400"
+                  src="images/pictured_rocks_miners_falls.jpeg"
+                  alt="A waterfall in a forest"
+                />
+                <figcaption>
+                  Miners falls is one of Pictured Rocks’ many waterfalls and
+                  gorgeous hikes.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  width="400"
+                  src="images/pictured_rocks_arch.jpeg"
+                  alt="An arch at pictured rocks"
+                />
+                <figcaption>
+                  One of the many lakeshore views is an arch over the water.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  width="400"
+                  src="images/pictured_rocks_camping.jpeg"
+                  alt="Tents in a forest"
+                />
+                <figcaption>Pictured Rocks also features campsites.</figcaption>
+              </figure>
             </div>
-            <img class="gif" src="images/sequoia_national_park.gif" alt="Moving image of river between moutains"
-              width="400">
-            <img class="still" src="images/sequoia_national_park.jpg" alt="River between mountains" width="400">
           </div>
-        </div>
-        <div class="photo-gallery-container">
-          <h3>Photo Gallery</h3>
-          <div class="photo-gallery">
-            <figure>
-              <img src="images/sequoia_tunnel_tree.jpg" alt="Sequoia tree with a tunnel carved through it" width="200">
-              <figcaption>
-                This large sequoia tree had a tunnel cut through it to make way for
-                a trail. The size comparison with the people demonstrates the giant
-                size of the trees in the forest.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/sequoia_bear.jpg" alt="Black bear in the forest." width="200">
-              <figcaption>
-                Sequoia National Park is also home to lots of wildlife, including
-                this black bear. If you’re not careful with your stuff, they might
-                even steal your food!
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/sequoia_general_sherman.jpg" alt="A gigantic tree that towers over the other trees"
-                width="200">
-              <figcaption>
-                Pictured here is the General Sherman tree, the largest tree in the
-                world. The sheer size and height of the tree is large enough to even
-                be intimidating to people who are seeing it for the first time. It
-                truly towers over the rest of the landscape around it.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/sequoia_trail_tree.jpg" alt="A trail next to a sequoia tree." width="200">
-              <figcaption>
-                This trail in Sequoia National Park houses a giant sequoia tree
-                right next to the path on which people can hike. The giant trees are
-                really a spectacle compared to the typical trees you see every day.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/sequoia_crystal_cave.JPG"
-                alt="A cave with intricate stalactite and stalagmite formations" width="200">
-              <figcaption>
-                Another well-known attraction of Sequoia National Park is its
-                underground Crystal Cave. The cave exhibits intricate formations of
-                stalactites and stalagmites throughout the underground of the
-                forest.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section> <!--Brian Wu-->
-      <section>
-        <div class="title-img">
-          <div class="image-wrap">
-            <img class="gif" src="images/Banff_National_Park.gif" alt="Moving image of Lake between moutains"
-              width="400">
-            <img class="still" src="images/Banff_National_Park.JPG" alt="Lake between mountains" width="400">
-            <p>
-              Banff National Park is in Western Canada in the province of Alberta.
-              It is near the city of Calgary and situated in the Rocky Mountains.
-              Banff is known for its mountains and natural beauty, along with its
-              plant and animal life. The national park fuels the tourist industry in
-              Western Canada.
-            </p>
-          </div>
-          <div class="location-title">
-            <div class="title">
-              <h2>Banff National Park</h2>
-              <p><span class="bold"> Location:</span> North America</p>
+        </section>
+        <section id="yellowstone">
+          <div class="title-img">
+            <div class="image-wrap">
+              <img
+                class="gif"
+                src="images/yellowstone_cauldron.gif"
+                width="400"
+                alt="Bubbling cauldron."
+              />
+              <img
+                class="still"
+                src="images/yellowstone_cauldron.jpg"
+                width="400"
+                alt="Bubbling cauldron"
+              />
+              <p>
+                Yellowstone is the first national park in the United States. It
+                covers over 2.2 million acres, and provides an opportunity to
+                see wildlife and explore geothermal areas. In fact, Yellowstone
+                contains about half the world's active geysers.
+                <br />
+                These unique opportunities also bring out a lot of bad decisions
+                among the tourists. Every year visitors injure themselves or the
+                wildlife by getting close to the animals. You can see examples
+                of people making bad decisions by visiting
+                <a
+                  href="https://www.facebook.com/groups/yellowstonenationalparkinvasionoftheidiots/"
+                  >Yellowstone National Park: Invasion of the Idiots</a
+                >,
+                <a href="https://www.instagram.com/touronsofyellowstone/?hl=en"
+                  >Tourons of Yellowstone</a
+                >, or
+                <a href="https://cowboystatedaily.com/">Cowboy State Daily</a>.
+              </p>
             </div>
-            <img class="gif" src="images/Banff_National_Park.gif" alt="Moving image of Lake between moutains"
-              width="400">
-            <img class="still" src="images/Banff_National_Park.JPG" alt="Lake between mountains" width="400">
+            <div class="location-title">
+              <div class="title">
+                <h2>Yellowstone</h2>
+                <p><span class="bold">Location: </span>North America</p>
+              </div>
+              <img
+                class="gif"
+                src="images/yellowstone_cauldron.gif"
+                width="400"
+                alt="Bubbling cauldron."
+              />
+              <img
+                class="still"
+                src="images/yellowstone_cauldron.jpg"
+                width="400"
+                alt="Bubbling cauldron"
+              />
+              <div class="desktop-title">
+                <h2>Yellowstone</h2>
+                <p><span class="bold">Location: </span>North America</p>
+              </div>
+              <p class="description">
+                Yellowstone is the first national park in the United States. It
+                covers over 2.2 million acres, and provides an opportunity to
+                see wildlife and explore geothermal areas. In fact, Yellowstone
+                contains about half the world's active geysers.
+                <br />
+                These unique opportunities also bring out a lot of bad decisions
+                among the tourists. Every year visitors injure themselves or the
+                wildlife by getting close to the animals. You can see examples
+                of people making bad decisions by visiting
+                <a
+                  href="https://www.facebook.com/groups/yellowstonenationalparkinvasionoftheidiots/"
+                  >Yellowstone National Park: Invasion of the Idiots</a
+                >,
+                <a href="https://www.instagram.com/touronsofyellowstone/?hl=en"
+                  >Tourons of Yellowstone</a
+                >, or
+                <a href="https://cowboystatedaily.com/">Cowboy State Daily</a>.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="description">
-          <p>
-            Banff has many attractions within its borders including numerous lakes
-            fed by glaciers creating an iconic turquoise color. Banff also borders
-            numerous other national parks further boosting its attractiveness as a
-            tourist location. Banff’s glaciers have been shrinking and may
-            disappear in the next few decades.
-          </p>
-        </div>
-        <div class="photo-gallery-container">
-          <h3>Photo Gallery</h3>
-          <div class="photo-gallery">
-            <figure>
-              <img src="images/Banff_gondola.JPG" alt="Gondola leading up to highest peaks of Banff" width="200">
-              <figcaption>
-                Banff gondola leads to the highest peaks and allows for spectacular
-                views
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/Banff_Moraine.JPG" alt="Large turquoise lake with surrounding peaks" width="200">
-              <figcaption>
-                Lake Moraine is fed by glacial melt, the minerals in the glaciers
-                give it its iconic color.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/Banff_Sulphur_mountain.JPG" alt="Rocky peaks and trails on a high mountain" width="200">
-              <figcaption>
-                Sulphur mountain is accessible through the Banff Gondola and
-                provides a central view of the surrounding mountain ranges.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/Banff_Fairmont.JPG" alt="Large hotel complex in green forests surrounded by mountains"
-                width="200">
-              <figcaption>
-                The fairmont resort is the foremost luxury hotel in Banff built atop
-                hot springs.
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="images/Banff_Bow_falls.JPG"
-                alt="Wide waterfall into a river surrounded by mountains and forests." width="200">
-              <figcaption>Bow falls is a major attraction and provides many hiking trails.</figcaption>
-            </figure>
+          <div class="photo-gallery-container">
+            <h3>Photo Gallery</h3>
+            <div class="photo-gallery">
+              <figure>
+                <img
+                  src="images/yellowstone_travertine.JPG"
+                  width="200"
+                  alt="A large mound of multi-colored travertine"
+                />
+                <figcaption>
+                  Mammoth Hot Springs has a number of actively forming
+                  Travertine terraces.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/yellowstone_sulphur_springs.JPG"
+                  width="200"
+                  alt="A large spring with clouds of sulfur smoke rising from it."
+                />
+                <figcaption>
+                  If you can handle the odor, the Yellowstone Sulphur Springs is
+                  a great place to hike.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/yellowstone_sunset.jpg"
+                  width="200"
+                  alt="Sunset over mountains with some charred trees in the foreground"
+                />
+                <figcaption>
+                  The drive to Lamar Valley requires some dangerous roads. But
+                  the result is amazing sunset views.
+                </figcaption>
+              </figure>
+              <figure>
+                <video width="200" controls>
+                  <source src="images/yellowstone_prism.MOV" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  The multicolored layers get their hues from different species
+                  of bacteria living in the cooler water around the spring.
+                </figcaption>
+              </figure>
+              <figure>
+                <video width="200" controls>
+                  <source src="images/yellowstone_buffalo.MOV" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  The buffalo were so common along the roads in Yellowstone that
+                  our mantra became "If it ain't lickin the car, we aren't
+                  stopping."
+                </figcaption>
+              </figure>
+            </div>
           </div>
-        </div>
-      </section> <!--Kevin Chang-->
-    </main>
-  </div>
-</body>
-
+        </section>
+        <!-- Colleen van Lent -->
+        <section id="sequoia">
+          <div class="title-img">
+            <div class="image-wrap">
+              <img
+                class="gif"
+                src="images/sequoia_national_park.gif"
+                alt="Moving image of river between moutains"
+                width="400"
+              />
+              <img
+                class="still"
+                src="images/sequoia_national_park.jpg"
+                alt="River between mountains"
+                width="400"
+              />
+              <p>
+                Sequoia National Park is a large forest located in the Sierra
+                Nevada mountain range in California. It is famous for its
+                gigantic sequoia and redwood trees, as well as its underground
+                Crystal Cave. The park is a well-known attraction to many
+                tourists, receiving more than a million visitors annually. In
+                addition to its collection of giant trees, Sequoia National Park
+                is also home to thousands of prevalent flora and fauna.
+                <br />
+                Perhaps the most famous feature of Sequoia National Park is the
+                General Sherman tree – the largest tree in the world. Measuring
+                in at 275 feet tall, the tree towers over the surrounding
+                landscape and the people who come to view it. As of today, the
+                General Sherman tree is estimated to be around 2200 years old.
+              </p>
+            </div>
+            <div class="location-title">
+              <div class="title">
+                <h2>Sequoia National Park</h2>
+                <p><span class="bold">Location:</span> North America</p>
+              </div>
+              <img
+                class="gif"
+                src="images/sequoia_national_park.gif"
+                alt="Moving image of river between moutains"
+                width="400"
+              />
+              <img
+                class="still"
+                src="images/sequoia_national_park.jpg"
+                alt="River between mountains"
+                width="400"
+              />
+              <div class="desktop-title">
+                <h2>Sequoia National Park</h2>
+                <p><span class="bold">Location:</span> North America</p>
+              </div>
+              <p class="description">
+                Sequoia National Park is a large forest located in the Sierra
+                Nevada mountain range in California. It is famous for its
+                gigantic sequoia and redwood trees, as well as its underground
+                Crystal Cave. The park is a well-known attraction to many
+                tourists, receiving more than a million visitors annually. In
+                addition to its collection of giant trees, Sequoia National Park
+                is also home to thousands of prevalent flora and fauna.
+                <br />
+                Perhaps the most famous feature of Sequoia National Park is the
+                General Sherman tree – the largest tree in the world. Measuring
+                in at 275 feet tall, the tree towers over the surrounding
+                landscape and the people who come to view it. As of today, the
+                General Sherman tree is estimated to be around 2200 years old.
+              </p>
+            </div>
+          </div>
+          <div class="photo-gallery-container">
+            <h3>Photo Gallery</h3>
+            <div class="photo-gallery">
+              <figure>
+                <img
+                  src="images/sequoia_tunnel_tree.jpg"
+                  alt="Sequoia tree with a tunnel carved through it"
+                  width="200"
+                />
+                <figcaption>
+                  This large sequoia tree had a tunnel cut through it to make
+                  way for a trail. The size comparison with the people
+                  demonstrates the giant size of the trees in the forest.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/sequoia_bear.jpg"
+                  alt="Black bear in the forest."
+                  width="200"
+                />
+                <figcaption>
+                  Sequoia National Park is also home to lots of wildlife,
+                  including this black bear. If you’re not careful with your
+                  stuff, they might even steal your food!
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/sequoia_general_sherman.jpg"
+                  alt="A gigantic tree that towers over the other trees"
+                  width="200"
+                />
+                <figcaption>
+                  Pictured here is the General Sherman tree, the largest tree in
+                  the world. The sheer size and height of the tree is large
+                  enough to even be intimidating to people who are seeing it for
+                  the first time. It truly towers over the rest of the landscape
+                  around it.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/sequoia_trail_tree.jpg"
+                  alt="A trail next to a sequoia tree."
+                  width="200"
+                />
+                <figcaption>
+                  This trail in Sequoia National Park houses a giant sequoia
+                  tree right next to the path on which people can hike. The
+                  giant trees are really a spectacle compared to the typical
+                  trees you see every day.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/sequoia_crystal_cave.JPG"
+                  alt="A cave with intricate stalactite and stalagmite formations"
+                  width="200"
+                />
+                <figcaption>
+                  Another well-known attraction of Sequoia National Park is its
+                  underground Crystal Cave. The cave exhibits intricate
+                  formations of stalactites and stalagmites throughout the
+                  underground of the forest.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <!--Brian Wu-->
+        <section id="acadia">
+          <div class="title-img">
+            <div class="image-wrap">
+              <img
+                class="gif"
+                src="images/acadia-prof.gif"
+                alt="Moving image of Lake between moutains"
+                width="400"
+              />
+              <img
+                class="still"
+                src="images/acadia-prof.webp"
+                alt="Lake between mountains"
+                width="400"
+              />
+              <!-- paragraph and captions generated by chatgpt -->
+              <p class="description">
+                Beyond its natural splendor, Acadia National Park is home to an
+                array of wildlife, from peregrine falcons soaring above the
+                cliffs to elusive white-tailed deer roaming the forests.
+                Visitors can also explore the historic Jordan Pond House, a
+                charming tea house overlooking Jordan Pond, where they can
+                indulge in the park's famous popovers while surrounded by the
+                serenity of nature. Whether scaling the heights of Cadillac
+                Mountain or enjoying a leisurely day by the sea, Acadia National
+                Park captivates all who venture into its embrace, offering an
+                enriching experience that combines the tranquility of nature
+                with a deep sense of historical and ecological significance.
+                <br />
+                Acadia National Park, nestled along the rugged coastline of
+                Maine, stands as a testament to the stunning beauty of the
+                northeastern United States. Established in 1916, Acadia is
+                celebrated as the first national park east of the Mississippi
+                River. The park covers over 49,000 acres, encompassing a diverse
+                landscape that includes granite peaks, lush forests, pristine
+                lakes, and the iconic rocky shores of Mount Desert Island.
+                Acadia's crown jewel is Cadillac Mountain, the tallest peak on
+                the U.S. Atlantic coast, offering visitors a breathtaking
+                panoramic view of the sunrise that is among the first to touch
+                the continental United States. The park's unique blend of
+                mountainous terrain and coastal scenery provides an
+                extraordinary setting for a variety of outdoor activities, from
+                hiking and biking on an extensive network of trails to exploring
+                the tranquil carriage roads designed by John D. Rockefeller Jr.
+              </p>
+            </div>
+            <div class="location-title">
+              <div class="title">
+                <h2>Acadia National Park</h2>
+                <p><span class="bold"> Location:</span> North America</p>
+              </div>
+              <img
+                class="gif"
+                src="images/acadia-prof.gif"
+                alt="Moving image of Lake between moutains"
+                width="400"
+              />
+              <img
+                class="still"
+                src="images/acadia-prof.webp"
+                alt="Lake between mountains"
+                width="400"
+              />
+              <div class="desktop-title">
+                <h2>Sequoia National Park</h2>
+                <p><span class="bold">Location:</span> North America</p>
+              </div>
+              <p class="description">
+                Beyond its natural splendor, Acadia National Park is home to an
+                array of wildlife, from peregrine falcons soaring above the
+                cliffs to elusive white-tailed deer roaming the forests.
+                Visitors can also explore the historic Jordan Pond House, a
+                charming tea house overlooking Jordan Pond, where they can
+                indulge in the park's famous popovers while surrounded by the
+                serenity of nature. Whether scaling the heights of Cadillac
+                Mountain or enjoying a leisurely day by the sea, Acadia National
+                Park captivates all who venture into its embrace, offering an
+                enriching experience that combines the tranquility of nature
+                with a deep sense of historical and ecological significance.
+                <br />
+                Acadia National Park, nestled along the rugged coastline of
+                Maine, stands as a testament to the stunning beauty of the
+                northeastern United States. Established in 1916, Acadia is
+                celebrated as the first national park east of the Mississippi
+                River. The park covers over 49,000 acres, encompassing a diverse
+                landscape that includes granite peaks, lush forests, pristine
+                lakes, and the iconic rocky shores of Mount Desert Island.
+                Acadia's crown jewel is Cadillac Mountain, the tallest peak on
+                the U.S. Atlantic coast, offering visitors a breathtaking
+                panoramic view of the sunrise that is among the first to touch
+                the continental United States. The park's unique blend of
+                mountainous terrain and coastal scenery provides an
+                extraordinary setting for a variety of outdoor activities, from
+                hiking and biking on an extensive network of trails to exploring
+                the tranquil carriage roads designed by John D. Rockefeller Jr.
+              </p>
+            </div>
+          </div>
+          <div class="photo-gallery-container">
+            <h3>Photo Gallery</h3>
+            <div class="photo-gallery">
+              <figure>
+                <img
+                  src="images/acadia-1.jpeg"
+                  alt="Gondola leading up to highest peaks of Banff"
+                  width="200"
+                />
+                <figcaption>
+                  Overlooking the gorgeous landscape over the rocks. Catch a
+                  view of the beautiful fall leaves.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/acadia-2.jpeg"
+                  alt="Large turquoise lake with surrounding peaks"
+                  width="200"
+                />
+                <figcaption>
+                  Paddle into serenity on Jordan Pond – a crystal-clear oasis
+                  surrounded by the breathtaking vistas of Acadia National Park.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/acadia-3.jpeg"
+                  alt="Rocky peaks and trails on a high mountain"
+                  width="200"
+                />
+                <figcaption>
+                  Explore the historic charm of Jordan Pond House and savor the
+                  famous Acadia popovers with a view.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/acadia-4.jpg"
+                  alt="Large hotel complex in green forests surrounded by mountains"
+                  width="200"
+                />
+                <figcaption>
+                  Chasing the first light atop Cadillac Mountain – where the
+                  sunrise over Acadia National Park paints the sky with hues of
+                  gold and pink.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="images/acadia-5.jpeg"
+                  alt="Wide waterfall into a river surrounded by mountains and forests."
+                  width="200"
+                />
+                <figcaption>
+                  Among the ancient pines and granite cliffs, find your path
+                  through Acadia's enchanting forest trails.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <!--Ellie Irwin-->
+        <script src="js/travel.js"></script>
+      </main>
+    </div>
+  </body>
 </html>

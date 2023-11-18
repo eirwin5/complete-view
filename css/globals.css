@@ -28,6 +28,10 @@
   z-index: 1;
 }
 
+:focus { 
+  border: 2px solid black;
+}
+
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat-Regular.ttf);
@@ -133,7 +137,7 @@ nav li div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 20px;
     align-items: baseline;
   } 
 
