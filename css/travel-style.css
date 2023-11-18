@@ -364,14 +364,14 @@ section:first-child {
     grid-column: auto;
   }
 
-  .photo-gallery figure {
+  /* .photo-gallery figure {
     position: relative;
     overflow: hidden;
     background-color: #f0f0f0;
     box-shadow: none;
-  }
+  } */
 
-  .photo-gallery figcaption {
+  /* .photo-gallery figcaption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -382,9 +382,10 @@ section:first-child {
     margin: 0;
     opacity: 0;
     transition: opacity 0.3s;
-  }
+  } */
 
-  .photo-gallery figure:hover figcaption {
+  /* .photo-gallery figure:hover figcaption {
     opacity: 1;
-  }
+  } */
+
 }
