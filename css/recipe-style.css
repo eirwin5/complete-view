@@ -137,6 +137,10 @@ section:first-of-type {
   display: none;
 }
 
+.desktop-description, button {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   .container {
     width: 400px;
@@ -206,7 +210,84 @@ section:first-of-type {
 
   @media (prefers-reduced-motion: reduce) {
     .recipe-container ol li {
-        transition: none;
-      }
+      transition: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 996px) {
+  h2 {
+    text-align: left;
+    padding: 20px;
+  }
+
+  .section-header img {
+    display: none;
+  }
+
+  .section-header {
+    padding: 0 20px 0 20px;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .desktop-description {
+    display: block;
+    width: 75%;
+  }
+
+  .facts {
+    text-align: left;
+    padding: 0;
+  }
+
+  .recipe-ing-steps {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .images-grid figure:nth-child(n) img {
+    /* for overriding the prev styles */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .images-grid figure:nth-child(3) img {
+    /* for overriding the prev styles */
+    border: 5px solid var(--pink);
+  }
+
+  .images-grid figure:nth-child(2) img {
+    /* for overriding the prev styles */
+    border: 5px solid var(--blue);
+  }
+
+  .images-grid figure:nth-child(1) img {
+    /* for overriding the prev styles */
+    border: 5px solid var(--yellow);
+  }
+
+  .ingredients,
+  .steps {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .images-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .facts-desc {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
