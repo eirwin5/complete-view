@@ -17,8 +17,16 @@ const locations = {
   },
 };
 
+// removes all previous sections and shows the selected one
+function show(id) { 
+  document.querySelectorAll("section").forEach((e) => { e.style.display = "none"; })
+  document.getElementById(id).style.display = "contents";
+}
+
+// updates the background img of the display div
 function update(id) {
   var display = document.getElementById("display");
+  console.log(display);
 
   const src = locations[id].src;
   const alt = locations[id].alt;
@@ -30,7 +38,7 @@ function update(id) {
   document.getElementById("pin-name").textContent = alt;
 }
 
-function reset() {
+function reset(id) {
   var display = document.getElementById("display");
 
   // set the background image and alt text back
