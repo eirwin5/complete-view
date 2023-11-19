@@ -76,45 +76,52 @@
         <div class="pick-location-animation">
           <div class="dynamic-title">
             <p>Let's go to...</p>
-            <h2 id="pin-name"></h2>
+            <h2 id="pin-name">
+              <span class="visually-hidden">Placeholder</span>
+            </h2>
           </div>
-          <div>
-            <div id="display">Hover over an pin on the map below.</div>
-          </div>
+          <div id="display">Hover over an pin on the map below.</div>
           <div class="us-container">
             <img src="images/us-map.svg" alt="outline of united states" />
             <a href="#picturedrocks"
               ><i
+                role="button"
                 aria-label="pictured rocks national lakeshore pin"
                 class="fa-solid fa-location-dot picturedrocks-location"
                 onmouseover="update('pr')"
                 onfocus="update('pr')"
                 onblur="reset()"
                 onmouseleave="reset()"
-              ></i
-            ></a>
+              ></i>
+              <span class="visually-hidden">Pictured Rocks</span>
+            </a>
             <a href="#yellowstone"
               ><i
+                role="button"
                 aria-label="yellowstone national parks pin"
                 class="fa-solid fa-location-dot yellowstone-location"
                 onmouseover="update('ys')"
                 onfocus="update('ys')"
                 onblur="reset()"
                 onmouseleave="reset()"
-              ></i
-            ></a>
+              ></i>
+              <span class="visually-hidden">Yellowstone</span>
+            </a>
             <a href="#acadia"
               ><i
+                role="button"
                 aria-label="acadia national partk pin"
                 class="fa-solid fa-location-dot acadia-location"
                 onmouseover="update('ac')"
                 onfocus="update('ac')"
                 onblur="reset()"
                 onmouseleave="reset()"
-              ></i
-            ></a>
+              ></i>
+              <span class="visually-hidden">Acadia National Park</span>
+            </a>
             <a href="#sequoia">
               <i
+                role="button"
                 aria-label="sequoia national park pin"
                 class="fa-solid fa-location-dot sequoia-location"
                 onmouseover="update('sq')"
@@ -122,6 +129,7 @@
                 onblur="reset()"
                 onmouseleave="reset()"
               ></i>
+              <span class="visually-hidden">Sequoia National Park</span>
             </a>
           </div>
         </div>

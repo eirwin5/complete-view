@@ -4,7 +4,7 @@ const locations = {
     alt: "Pictures Rocks National Lakeshore",
   },
   ys: {
-    src: "/images/yellowstone_sunset.jpg",
+    src: "/images/yellowstone_sulphur_springs.JPG",
     alt: "Yellowstone National Park",
   },
   sq: {

@@ -302,9 +302,10 @@ section:first-child {
     padding: 0px 15px;
     color: #ffffff;
     background-color: var(--purple);
-    background-size: 100%;
+    background-size: 200%;
     margin-bottom: 25px;
     border-radius: 50%;
+    object-fit: cover;
     background-repeat: no-repeat;
   }
 
@@ -358,7 +359,7 @@ section:first-child {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
-  .photo-gallery figure:nth-child(1),
+.photo-gallery figure:nth-child(1),
   .photo-gallery figure:nth-child(3),
   .photo-gallery figure:nth-child(5) {
     grid-column: auto;
@@ -369,7 +370,7 @@ section:first-child {
     overflow: hidden;
     background-color: #f0f0f0;
     box-shadow: none;
-  } */
+  } */ 
 
   /* .photo-gallery figcaption {
     position: absolute;
