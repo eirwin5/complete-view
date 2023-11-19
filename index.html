@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="favicon" href="travel-favicon.ico" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/globals.css" />
     <link rel="stylesheet" href="css/travel-style.css" />
@@ -10,7 +11,7 @@
       src="https://kit.fontawesome.com/dbc2de0a2d.js"
       crossorigin="anonymous"
     ></script>
-    <title>Commmon Project</title>
+    <title>Travel</title>
   </head>
 
   <body class="travel-body">
@@ -40,6 +41,7 @@
     <div class="travel-bg">
       <header>
         <div class="page-title">
+          <i class="fa-solid fa-plane"></i>
           <h1 class="travel">Travel</h1>
         </div>
         <div class="ticker-wrap">
@@ -85,6 +87,7 @@
           <div class="us-container">
             <img src="images/us-map.svg" alt="outline of united states" />
             <a
+              aria-label="pictured rocks national lakeshore pin"
               href="#picturedrocks"
               onclick="show('picturedrocks')"
               onkeypress="show('picturedrocks')"
@@ -92,14 +95,11 @@
               onfocus="update('pr')"
               onmouseleave="reset()"
               onblur="reset()"
-              ><i
-                role="button"
-                aria-label="pictured rocks national lakeshore pin"
-                class="fa-solid fa-location-dot picturedrocks-location"
-              ></i>
+              ><i class="fa-solid fa-location-dot picturedrocks-location"></i>
               <span class="visually-hidden">Pictured Rocks</span>
             </a>
             <a
+              aria-label="yellowstone national parks pin"
               href="#yellowstone"
               onclick="show('yellowstone')"
               onkeypress="show('yellowstone')"
@@ -107,14 +107,11 @@
               onfocus="update('ys')"
               onmouseleave="reset()"
               onblur="reset()"
-              ><i
-                role="button"
-                aria-label="yellowstone national parks pin"
-                class="fa-solid fa-location-dot yellowstone-location"
-              ></i>
+              ><i class="fa-solid fa-location-dot yellowstone-location"></i>
               <span class="visually-hidden">Yellowstone</span>
             </a>
             <a
+              aria-label="acadia national partk pin"
               href="#acadia"
               onclick="show('acadia')"
               onkeypress="show('acadia')"
@@ -122,14 +119,11 @@
               onfocus="update('ac')"
               onmouseleave="reset()"
               onblur="reset()"
-              ><i
-                role="button"
-                aria-label="acadia national partk pin"
-                class="fa-solid fa-location-dot acadia-location"
-              ></i>
+              ><i class="fa-solid fa-location-dot acadia-location"></i>
               <span class="visually-hidden">Acadia National Park</span>
             </a>
             <a
+              aria-label="sequoia national park pin"
               href="#sequoia"
               onclick="show('sequoia')"
               onkeypress="show('sequoia')"
@@ -138,11 +132,7 @@
               onmouseleave="reset()"
               onblur="reset()"
             >
-              <i
-                role="button"
-                aria-label="sequoia national park pin"
-                class="fa-solid fa-location-dot sequoia-location"
-              ></i>
+              <i class="fa-solid fa-location-dot sequoia-location"></i>
               <span class="visually-hidden">Sequoia National Park</span>
             </a>
           </div>
