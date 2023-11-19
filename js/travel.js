@@ -1,18 +1,18 @@
 const locations = {
   pr: {
-    src: "/images/pictured_rocks_profile.webp",
+    src: "../images/pictured_rocks_profile.webp",
     alt: "Pictures Rocks National Lakeshore",
   },
   ys: {
-    src: "/images/yellowstone_sulphur_springs.JPG",
+    src: "../images/yellowstone_sulphur_springs.JPG",
     alt: "Yellowstone National Park",
   },
   sq: {
-    src: "/images/sequoia_national_park.jpg",
+    src: "../images/sequoia_national_park.jpg",
     alt: "Sequoia National Park",
   },
   ac: {
-    src: "/images/acadia-prof.webp",
+    src: "../images/acadia-prof.webp",
     alt: "Acadia National Park",
   },
 };
