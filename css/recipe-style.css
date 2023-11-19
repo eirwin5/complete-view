@@ -208,6 +208,10 @@ section:first-of-type {
     transform: translateX(0);
   }
 
+  .flip-card-front { 
+    display: none;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .recipe-container ol li {
       transition: none;
@@ -307,7 +311,7 @@ section:first-of-type {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
   }
   

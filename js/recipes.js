@@ -1,6 +1,6 @@
-// function flipcard(card) { 
-//     document.getElementById("flip-card-inner").style.transform = 'rotateY(180deg)';
-// }
+function flipcard() { 
+    document.getElementById("flip-card-inner").style.transform = 'rotateY(180deg)';
+}
 
 function showNextItem(olId) {
     $("#" + olId + " li.active").slideUp("fast", function () {
