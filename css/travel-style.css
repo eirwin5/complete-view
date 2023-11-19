@@ -163,7 +163,7 @@ section:first-child {
 }
 
 .photo-gallery figcaption {
-  padding: 15px;
+  padding: 5px 10px 15px 10px;
 }
 
 .photo-gallery figure:nth-child(3) {
@@ -363,6 +363,12 @@ section:first-child {
   .photo-gallery figure:nth-child(3),
   .photo-gallery figure:nth-child(5) {
     grid-column: auto;
+  }
+
+  figure img, figure video { 
+    height: 300px;
+    width: auto;
+    object-fit: cover;
   }
 
   /* .photo-gallery figure {
