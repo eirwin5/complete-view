@@ -1,18 +1,18 @@
 const locations = {
   pr: {
-    src: "../images/pictured_rocks_profile.webp",
+    src: "https://paddlepicturedrocks.com/wp-content/uploads/2022/05/Paddling-Through-Lovers-Leap.webp",
     alt: "Pictures Rocks National Lakeshore",
   },
   ys: {
-    src: "../images/yellowstone_sulphur_springs.JPG",
+    src: "https://cdn.outsideonline.com/wp-content/uploads/2019/10/23/geyser-yelowstone-burst_h.jpg",
     alt: "Yellowstone National Park",
   },
   sq: {
-    src: "../images/sequoia_national_park.jpg",
+    src: "https://explorewithalec.com/wp-content/uploads/2021/08/sequioa--scaled.jpg",
     alt: "Sequoia National Park",
   },
   ac: {
-    src: "../images/acadia-prof.webp",
+    src: "https://i0.wp.com/www.thefatgirlhiking.com/wp-content/uploads/2022/07/Ocena-Path-Cliffs.jpg?fit=1024%2C1024&ssl=1",
     alt: "Acadia National Park",
   },
 };
